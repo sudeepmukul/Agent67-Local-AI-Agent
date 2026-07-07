@@ -6,6 +6,7 @@ client = TavilyClient(api_key=TAVILY_API_KEY)
 def web_search(query: str) -> str:
     """Search the web for recent and factual information."""
     response = client.search(query=query, search_depth="advanced", max_results=5)
+    print("Search Finished")
     output = []
 
     for result in response["results"]:
